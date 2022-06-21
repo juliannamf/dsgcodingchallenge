@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">DSGCodingChallenge</string>
+    <string name="search">Search</string>
+    <string name="title">Title</string>
+    <string name="location">Location</string>
+    <string name="date_and_time">Date and Time</string>
+    <string name="details">Details</string>
+    <string name="back_button">back button</string>
+    <string name="swift">Swift</string>
+    <string name="cancel">Cancel</string>
+</resources>
