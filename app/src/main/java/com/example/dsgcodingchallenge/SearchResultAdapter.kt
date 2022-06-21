@@ -7,6 +7,7 @@ import android.os.Looper
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.imageview.ShapeableImageView
@@ -31,6 +32,7 @@ class SearchResultAdapter(private val dataSet: ArrayList<Event>) :
         val eventLocation: TextView = view.findViewById(R.id.location)
         val eventDateAndTime: TextView = view.findViewById(R.id.dateandtime)
         val eventImage: ShapeableImageView = view.findViewById(R.id.eventImage)
+        val favoriteIcon: ImageView = view.findViewById(R.id.favoriteIcon)
 
         init {
 
@@ -56,6 +58,12 @@ class SearchResultAdapter(private val dataSet: ArrayList<Event>) :
         viewHolder.eventTitle.text = dataSet[position].title
         viewHolder.eventLocation.text = dataSet[position].location
         viewHolder.eventDateAndTime.text = dataSet[position].dateandtime
+
+        if (dataSet[position].isFavorite) {
+            viewHolder.favoriteIcon.setImageResource(R.drawable.ic_baseline_favorite_24)
+        } else{
+            viewHolder.favoriteIcon.setImageResource(0)
+        }
 
         val executor = Executors.newSingleThreadExecutor()
         val handler = Handler(Looper.getMainLooper())

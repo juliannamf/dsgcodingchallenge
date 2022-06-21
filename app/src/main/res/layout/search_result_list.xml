@@ -9,21 +9,33 @@
     android:elevation="10dp"
     android:orientation="horizontal">
 
-    <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/eventImage"
-        android:layout_width="95dp"
-        android:layout_height="95dp"
-        android:layout_gravity="center"
-        android:padding="15dp"
-        android:scaleType="centerCrop"
-        app:shapeAppearanceOverlay="@style/roundedCornerImageView"/>
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/eventImage"
+            android:layout_width="95dp"
+            android:layout_height="95dp"
+            android:layout_gravity="center"
+            android:padding="15dp"
+            android:scaleType="centerCrop"
+            app:shapeAppearanceOverlay="@style/roundedCornerImageView" />
+
+        <ImageView
+            android:id="@+id/favoriteIcon"
+            android:layout_width="35dp"
+            android:layout_height="35dp" />
+
+    </FrameLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingVertical="15dp"
         android:layout_gravity="center"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:paddingVertical="15dp">
 
         <TextView
             android:id="@+id/title"
@@ -31,21 +43,21 @@
             android:layout_height="wrap_content"
             android:text="@string/title"
             android:textColor="@color/black"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/location"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/location"
-            android:textColor="@color/black"/>
+            android:textColor="@color/black" />
 
         <TextView
             android:id="@+id/dateandtime"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/date_and_time"
-            android:textColor="@color/black"/>
+            android:textColor="@color/black" />
 
     </LinearLayout>
 

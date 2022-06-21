@@ -33,15 +33,32 @@
             android:textSize="18sp" />
     </RelativeLayout>
 
-    <TextView
-        android:id="@+id/eventTitle"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:weightSum="12"
+        android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/eventTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="10"
         android:padding="10dp"
         android:text="@string/title"
         android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="bold"/>
+
+        <ImageView
+            android:id="@+id/favoriteBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_baseline_favorite_border_24"/>
+
+    </LinearLayout>
 
     <ImageView
         android:id="@+id/eventImage"
